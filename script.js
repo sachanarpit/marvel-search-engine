@@ -13,9 +13,9 @@ const getRes = async () => {
 };
 
 const getData = async (input) => {
-  const URL = "http://localhost:2345/data";
+  const URL = "https://orchid-seahorse-cap.cyclic.app/hero/find";
   const limit = 5;
-  const data = await fetch(`${URL}?q=${input}&_limit=${limit}`);
+  const data = await fetch(`${URL}?q=${input}`);
   const jsonData = await data.json();
   return jsonData;
 };
