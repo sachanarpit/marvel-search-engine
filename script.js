@@ -36,7 +36,8 @@ const popup = (
   let div = document.createElement("div");
   div.setAttribute("id", "card-container");
   div.setAttribute("data-offset", "2");
-  div.innerHTML = ` <div class="pg">
+  div.setAttribute("class", "fadeIn");
+  div.innerHTML = ` <div class="pg ">
           <img
             src=${images.lg}
           />
@@ -69,6 +70,10 @@ const popup = (
   btn.innerText = "❌";
   main.append(div, btn);
   model.append(main);
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 };
 
 const ListSection = (x) => {
@@ -97,7 +102,7 @@ const ListSection = (x) => {
       });
       div.setAttribute(
         "class",
-        " flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2"
+        "fadeIn flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2"
       );
 
       //span
